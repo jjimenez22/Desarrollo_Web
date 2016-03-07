@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-image: url("imagen/wall.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contenedor {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+header {
+	background: #660033;
+	border-style: solid;
+	border-width: medium;
+	border-color: #660033;
+}
+
+header figure {
+	display: block;
+	float: left;
+}
+header h1 {
+	font-family: "slabo";
+	float: left;
+	font-size: 80px;
+	color: #f1d766;
+}
+.titulo {
+	width: 100%;
+	overflow: hidden;
+	background-image: url("imagen/tbg.jpg");
+	background-position: center;
+	/*background-attachment: fixed;*/
+}
+
+header nav ul {
+	list-style-type: none;
+}
+header nav ul li {
+	float: left;
+}
+header nav ul li a {
+	display: block;
+	padding: 5px 10px;
+	background: #f1d766;
+	border-bottom: medium solid #A80356;
+	font-weight: bold;
+}
+header nav ul li a:hover{
+	background: #A80356;
+	color: #f1d766;
+}
+
+header nav {
+	overflow: hidden;
+}
+
+.invisible {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+p a:hover {
+	background: #A80356;
+	color: #f1d766;
+}
+
+header, .principal, footer {
+	width: 90%;
+	display: inline-block;
+	margin: 20px auto;
+}
+.articulos, footer {
+	padding: 10px 20px;
+}
+.principal {
+	padding: 0 20px;
+}
+
+.articulos {
+	width: 83%;
+	margin-right: 2%;
+	background: #f1d766;
+}
+
+.articulos h2 {
+	text-align: center;
+	font-size: 2em;
+}
+
+.articulos{
+	float: left;
+}
+aside {
+	float: right;
+}
+
+.articulos article, .articulos figure {
+	width: 50%;
+	float: left;
+}
+.articulos figure img {
+	width: 100%;
+}
+.articulos article {
+	text-align: justify;
+	font-family: "lora";
+
+}
+article p {
+	padding: 10px;
+}
+.bcdf {
+	font-family: "slabo";
+	text-align: center;
+}
+.subr {
+	text-decoration: underline;
+}
+.articulos figure {
+	padding: 10px;
+}
+.articulos figure img {
+	border-style: solid;
+	border-width: thick;
+	border-color: #660033;
+}
+.articulos div {
+	width: 40%;
+	float: right;
+	text-align: center;
+}
+.articulos div a {
+	display: block;
+	width: 100%;
+	background: #A80356;
+	border-bottom: medium solid #660033;
+	font-weight: bold;
+}
+.articulos div a:hover {
+	background: #660033;
+	color: #f1d766;
+}
+
+.articulos table {
+	width: 100%;
+}
+table, caption, td, th {
+	border-style: solid;
+	border-collapse: collapse;
+	border-width: medium;
+	border-color: #B66505;
+	text-align: center;
+}
+caption {
+	background: #B66505;
+	color: #f1d766;
+}
+th {
+	color: #660033;
+}
+th, td {
+	padding: 5px;
+}
+
+aside {
+	width: 15%;
+	padding: 10px 0;
+	background: #660033;
+}
+aside h3 {
+	color: #f1d766;
+	padding: 0 5px;
+}
+aside ul li {
+	list-style-type: none;
+	text-align: center;
+}
+aside ul li a {
+	display: block;
+	text-decoration: none;
+	background: #A80356;
+	border: thin solid #660033;
+}
+aside ul li a:hover{
+	color: #f1d766;
+	background: #660033;
+}
+
+footer {
+	text-align: center;
+	background: #B66505;
+}
+footer p {
+	display: inline-block;
+	float: left;
+}
+
+@media screen and (max-width:980px){
+	.contenedor{
+		width: 95%;
+	}
+	.articulos {
+		width: 65%;
+	}
+	aside {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width:860px) {
+	.articulos article {
+		width: 60%;
+	}
+	.articulos figure {
+		width: 40%;
+	}
+	/* Ajustar las dimensiones del articulo y su imagen para que no se haga dificil de leer */
+}
+@media screen and (max-width:780px) {
+	.articulos article, .articulos figure {
+		width: 100%;
+	}
+	/* Ajustar articulo e imagen para que ocupen toda la seccion de articulos y asi no se haga ilegible */
+}
+
+@media screen and (max-width:700px) {
+	.articulos, aside {
+		width: 100%;
+	}
+	.articulos article {
+		width: 60%;
+	}
+	.articulos figure {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width:655px) {
+	header h1 {
+		font-size: 70px;
+	}
+	/* Redimensionar titulo para que no se mezcle con la parte clara de la imagen de fondo */
+}
+
+
+@media screen and (max-width:600px) {
+	.articulos article, .articulos figure {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:590px) {
+	header h1 {
+		font-size: 60px;
+	}
+	/* Redimensionar titulo para que no se mezcle con la parte clara de la imagen de fondo */
+}
+
+@media screen and (max-width:480px) {
+	header {
+		width: auto;
+	}
+	header h1 {
+		font-size: 50px;
+	}
+
+}
+
+@font-face {
+	font-family: "slabo";
+	src: url("fuentes/Slabo27px-Regular.ttf");
+}
+@font-face {
+	font-family: "lora";
+	src: url("fuentes/Lora-Regular.ttf");
+}

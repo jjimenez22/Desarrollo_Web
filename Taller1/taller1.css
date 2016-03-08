@@ -7,6 +7,7 @@ body {
 	background-image: url("imagen/wall.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .contenedor {
@@ -50,7 +51,7 @@ header nav ul li a {
 	display: block;
 	padding: 5px 10px;
 	background: #f1d766;
-	border-bottom: medium solid #A80356;
+	border-bottom: thick solid #A80356;
 	font-weight: bold;
 }
 header nav ul li a:hover{
@@ -90,6 +91,7 @@ header, .principal, footer {
 	width: 83%;
 	margin-right: 2%;
 	background: #f1d766;
+	border: thick solid #660033;
 }
 
 .articulos h2 {
@@ -97,11 +99,8 @@ header, .principal, footer {
 	font-size: 2em;
 }
 
-.articulos{
+.articulos, aside{
 	float: left;
-}
-aside {
-	float: right;
 }
 
 .articulos article, .articulos figure {
@@ -143,12 +142,9 @@ article p {
 	display: block;
 	width: 100%;
 	background: #A80356;
-	border-bottom: medium solid #660033;
-	font-weight: bold;
-}
-.articulos div a:hover {
-	background: #660033;
+	border-bottom: thick solid #660033;
 	color: #f1d766;
+	font-weight: bold;
 }
 
 .articulos table {
@@ -190,10 +186,14 @@ aside ul li a {
 	text-decoration: none;
 	background: #A80356;
 	border: thin solid #660033;
-}
-aside ul li a:hover{
 	color: #f1d766;
+	font-weight: bold;
+}
+aside ul li a:hover, .articulos div a:hover{
 	background: #660033;
+}
+aside ul li a:visited, .articulos div a:visited{
+	color: #B66505;
 }
 
 footer {

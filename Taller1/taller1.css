@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	background-image: url("imagen/wall.jpg");
+	background-image: url("Imagen/wall.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -36,7 +36,7 @@ header h1 {
 .titulo {
 	width: 100%;
 	overflow: hidden;
-	background-image: url("imagen/tbg.jpg");
+	background-image: url("Imagen/tbg.jpg");
 	background-position: center;
 	/*background-attachment: fixed;*/
 }

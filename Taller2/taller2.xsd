@@ -1,0 +1,61 @@
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="contactos">
+      		<xs:complexType>
+      			<xs:sequence>
+      				<xs:element name="persona" maxOccurs="unbounded">
+      					<xs:complexType>
+      							<xs:sequence>
+      								<xs:element name="cedula" type="xs:integer">
+      									<xs:unique name="ci_unique">
+      										<xs:selector xpath="cedula"/>
+      										<xs:field xpath="."/>
+      									</xs:unique>
+      								</xs:element>
+      								<xs:element name="nombre" type="xs:string"/>
+      								<xs:element name="apellido" type="xs:string"/>
+      								<xs:element name="edad">
+      									<xs:simpleType>
+      										<xs:restriction base="xs:integer">
+      											<xs:minExclusive value="15"/>
+      											<xs:maxExclusive value="90"/>
+      										</xs:restriction>
+      									</xs:simpleType>
+      								</xs:element>
+      								<xs:element name="genero">
+      									<xs:simpleType>
+      										<xs:restriction base="xs:string">
+      											<xs:pattern value="masculino|femenino|otro"/>
+      										</xs:restriction>
+      									</xs:simpleType>
+      								</xs:element>
+      								<xs:element name="telefono" maxOccurs="2">
+      									<xs:simpleType>
+      										<xs:restriction base="xs:string">
+      											<xs:pattern value="[0-9]{4}-[0-9]{7}"/>
+      										</xs:restriction>
+      									</xs:simpleType>
+      								</xs:element>
+      								<xs:element name="correo" maxOccurs="unbounded">
+      									<xs:simpleType>
+      										<xs:restriction base="xs:string">
+      											<xs:pattern value="([a-zA-Z0-9_.])+@([a-zA-Z0-9_.])+"/>
+      										</xs:restriction>
+      									</xs:simpleType>
+      								</xs:element>
+      								<xs:element name="estado">
+      									<xs:simpleType>
+      										<xs:restriction base="xs:string">
+      											<xs:pattern value="soltero|casado|divorciado|viudo|concubinato"/>
+      										</xs:restriction>
+      									</xs:simpleType>
+      								</xs:element>
+      								<xs:element name="direccion" type="xs:string"/>
+      								<xs:element name="profesion" type="xs:string"/>
+      								<xs:element name="ocupacion" type="xs:string"/>
+      							</xs:sequence>
+      						</xs:complexType>
+      				</xs:element>
+      			</xs:sequence>
+      		</xs:complexType>
+      	</xs:element>
+   </xs:schema>

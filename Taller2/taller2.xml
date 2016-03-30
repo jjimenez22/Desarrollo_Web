@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE contactos SYSTEM "dtd/taller2.dtd"> -->
+<contactos>
+   <persona>
+      <cedula>23452101</cedula>
+      <nombre>Ramon</nombre>
+      <apellido>Perez</apellido>
+      <edad>19</edad>
+      <genero>masculino</genero>
+      <telefono>0416-7413325</telefono>
+      <correo>ramonperrez97@yahoo.com</correo>
+      <estado>soltero</estado>
+      <direccion>Caracas, Venezuela</direccion>
+      <profesion>Estudiante</profesion>
+      <ocupacion>Mesonero</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>23421010</cedula>
+      <nombre>Simon</nombre>
+      <apellido>Carabaz</apellido>
+      <edad>29</edad>
+      <genero>masculino</genero>
+      <telefono>0414-4658875</telefono>
+      <correo>sc1010@facyt.uc.edu.ve</correo>
+      <estado>concubinato</estado>
+      <direccion>Canarias, España</direccion>
+      <profesion>Quesero</profesion>
+      <ocupacion>Comerciante</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>12451212</cedula>
+      <nombre>Sandra</nombre>
+      <apellido>Caraballos</apellido>
+      <edad>30</edad>
+      <genero>femenino</genero>
+      <telefono>0416-5124465</telefono>
+      <correo>candica@gmail.com</correo>
+      <estado>casado</estado>
+      <direccion>Valencia, Venezuela</direccion>
+      <profesion>Cosmetologa</profesion>
+      <ocupacion>Terapeuta</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>89689797</cedula>
+      <nombre>Yujandra</nombre>
+      <apellido>Melon</apellido>
+      <edad>20</edad>
+      <genero>femenino</genero>
+      <telefono>0412-7984655</telefono>
+      <correo>yuja95@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Valencia, Venezuela</direccion>
+      <profesion>Secretaria</profesion>
+      <ocupacion>Secretaria</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>82649573</cedula>
+      <nombre>Pancracio</nombre>
+      <apellido>Zuchi</apellido>
+      <edad>16</edad>
+      <genero>masculino</genero>
+      <telefono>0241-5786695</telefono>
+      <correo>sushi_de_pancreas@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Florencia, Italia</direccion>
+      <profesion>Estudiante</profesion>
+      <ocupacion>Bartender</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>12345678</cedula>
+      <nombre>Cosimino</nombre>
+      <apellido>Imbimbo</apellido>
+      <edad>40</edad>
+      <genero>masculino</genero>
+      <telefono>0414-8465597</telefono>
+      <correo>elpanbimbo@gmail.com</correo>
+      <estado>casado</estado>
+      <direccion>Venecia, Italia</direccion>
+      <profesion>Bailarin</profesion>
+      <ocupacion>Coreografo</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>14785236</cedula>
+      <nombre>Francisquito</nombre>
+      <apellido>Imbruglia</apellido>
+      <edad>48</edad>
+      <genero>masculino</genero>
+      <telefono>0412-9135548</telefono>
+      <correo>francisimb@hotmail.com</correo>
+      <estado>casado</estado>
+      <direccion>Brucelas, Brucelas</direccion>
+      <profesion>Agronomo</profesion>
+      <ocupacion>Granjero</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>98765432</cedula>
+      <nombre>Xiquixaca</nombre>
+      <apellido>Teotihuacano</apellido>
+      <edad>25</edad>
+      <genero>otro</genero>
+      <telefono>0414-7894465</telefono>
+      <correo>xiquita@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Palenque, Mexico</direccion>
+      <profesion>Religioso</profesion>
+      <ocupacion>Saserdote</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>65432101</cedula>
+      <nombre>Melvin</nombre>
+      <apellido>Doo</apellido>
+      <edad>32</edad>
+      <genero>otro</genero>
+      <telefono>0412-2460058</telefono>
+      <correo>melvinadoo@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Jamaica, Jamaica</direccion>
+      <profesion>Musico</profesion>
+      <ocupacion>Cantante</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>23568974</cedula>
+      <nombre>Erika</nombre>
+      <apellido>Shinchan</apellido>
+      <edad>75</edad>
+      <genero>femenino</genero>
+      <telefono>0414-1234468</telefono>
+      <correo>shinchan@gmail.com</correo>
+      <estado>viudo</estado>
+      <direccion>Nipon, Japon</direccion>
+      <profesion>Educadora</profesion>
+      <ocupacion>Jubilada</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>25142514</cedula>
+      <nombre>Cosimo</nombre>
+      <apellido>Nohara</apellido>
+      <edad>23</edad>
+      <genero>masculino</genero>
+      <telefono>0416-8794425</telefono>
+      <correo>cnohara91@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Okinawa, Japon</direccion>
+      <profesion>Fisico</profesion>
+      <ocupacion>Fisico Experimental</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>24356891</cedula>
+      <nombre>Lupe</nombre>
+      <apellido>Hegg</apellido>
+      <edad>56</edad>
+      <genero>femenino</genero>
+      <telefono>0412-0324465</telefono>
+      <correo>lheggjukka@yahoo.es</correo>
+      <estado>casado</estado>
+      <direccion>Gotemburgo, Suecia</direccion>
+      <profesion>Animador</profesion>
+      <ocupacion>Organizadora de Eventos</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>86754216</cedula>
+      <nombre>Ricky</nombre>
+      <apellido>Soplon</apellido>
+      <edad>41</edad>
+      <genero>otro</genero>
+      <telefono>0412-5135578</telefono>
+      <correo>soplon123rick@facyt.uc.edu.ve</correo>
+      <estado>casado</estado>
+      <direccion>Welintong, Nueva Zelanda</direccion>
+      <profesion>Deportista</profesion>
+      <ocupacion>Surfista Profesional</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>95846231</cedula>
+      <nombre>Chupichupi</nombre>
+      <apellido>Brej</apellido>
+      <edad>28</edad>
+      <genero>otro</genero>
+      <telefono>0414-7154498</telefono>
+      <correo>chupibrej@hotmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Wapford, Reino Unido</direccion>
+      <profesion>Veterinario</profesion>
+      <ocupacion>Aceador de Mascotas</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>17485964</cedula>
+      <nombre>Hermes</nombre>
+      <apellido>Hermetico</apellido>
+      <edad>70</edad>
+      <genero>masculino</genero>
+      <telefono>0416-9876654</telefono>
+      <correo>magiahermetica@gmail.com</correo>
+      <estado>viudo</estado>
+      <direccion>Creta, Grecia</direccion>
+      <profesion>Esoterista</profesion>
+      <ocupacion>Profesor</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>85412687</cedula>
+      <nombre>Vikka</nombre>
+      <apellido>Chow</apellido>
+      <edad>24</edad>
+      <genero>femenino</genero>
+      <telefono>0416-0200005</telefono>
+      <correo>chykungunya@gmail.com</correo>
+      <estado>concubinato</estado>
+      <direccion>Mongishaw, Mongolia</direccion>
+      <profesion>Deportista</profesion>
+      <ocupacion>Equitador</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>64829731</cedula>
+      <nombre>Julio</nombre>
+      <apellido>Zancudo</apellido>
+      <edad>67</edad>
+      <genero>masculino</genero>
+      <telefono>0412-3579513</telefono>
+      <correo>zancudoj@gmail.com</correo>
+      <estado>casado</estado>
+      <direccion>Ciudad del Cabo, Sudafrica</direccion>
+      <profesion>Marinero</profesion>
+      <ocupacion>Jubilado</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>23232323</cedula>
+      <nombre>Sanderson</nombre>
+      <apellido>Pixie</apellido>
+      <edad>74</edad>
+      <genero>masculino</genero>
+      <telefono>0414-9461523</telefono>
+      <correo>alal@gmail.com</correo>
+      <estado>casado</estado>
+      <direccion>Tronheim, Noruega</direccion>
+      <profesion>Empresario</profesion>
+      <ocupacion>Jubilado</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>21212120</cedula>
+      <nombre>Ahl</nombre>
+      <apellido>Mualin</apellido>
+      <edad>50</edad>
+      <genero>masculino</genero>
+      <telefono>0412-7315584</telefono>
+      <correo>elarabeal@gmail.com</correo>
+      <estado>soltero</estado>
+      <direccion>Persia, Iran</direccion>
+      <profesion>Religioso</profesion>
+      <ocupacion>Saserdote</ocupacion>
+   </persona>
+
+   <persona>
+      <cedula>21313131</cedula>
+      <nombre>Carol</nombre>
+      <apellido>Marquez</apellido>
+      <edad>31</edad>
+      <genero>femenino</genero>
+      <telefono>0412-9642105</telefono>
+      <correo>cmprofesional@outlook.com</correo>
+      <estado>soltero</estado>
+      <direccion>Illinois, USA</direccion>
+      <profesion>Secretaria</profesion>
+      <ocupacion>Asistente Telematica</ocupacion>
+   </persona>
+
+
+
+</contactos>

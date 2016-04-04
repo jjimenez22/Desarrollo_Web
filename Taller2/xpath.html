@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>XPath</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+         function cargarXML(fname)
+         {
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", fname, false);
+            xhttp.send("");
+            return xhttp;
+         }
+
+         function procXPath(path, xml)
+         {
+            if (document.implementation && document.implementation.createDocument)
+            {
+               var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+               var result = nodes.iterateNext();
+
+               document.write("<h3>XPath: "+path+"</h3>");
+               while (result)
+               {
+                 document.write(result.childNodes[0].nodeValue);
+                 document.write("<br>");
+                 result=nodes.iterateNext();
+              }
+              document.write("<hr>");
+            }
+         }
+
+         var xml = cargarXML("taller2.xml").responseXML;
+
+         //Los nombres de todos
+         procXPath("/contactos/persona/nombre", xml);
+
+         //Todos los apellidos
+         procXPath("//apellido", xml);
+
+         //Primera y ultima persona
+         procXPath("/contactos/persona[1]/nombre | /contactos/persona[last()]/nombre", xml);
+
+         //Todas las edades
+         procXPath("/contactos/persona/child::edad", xml);
+
+         //Todas los menores de 30
+         procXPath("/contactos/persona[edad<30]/nombre", xml);
+
+         //Todas los menores de 20
+         procXPath("/contactos/persona[edad<20]/nombre", xml);
+
+         //Todas los mayores de 50
+         procXPath("/contactos/persona[edad>50]/nombre", xml);
+
+         //los mayores de 20 y menores de 30
+         procXPath("/contactos/persona[edad>20 and edad<30]/child::nombre", xml);
+
+         //los hombres
+         procXPath("/contactos/persona[genero='masculino']/child::nombre", xml);
+
+         //los mujeres
+         procXPath("/contactos/persona[genero='femenino']/child::nombre", xml);
+
+         //los transgenero
+         procXPath("/contactos/persona[genero='otro']/child::nombre", xml);
+
+         //los nombres y apellidos de los transgenero
+         procXPath("/contactos/persona[genero='otro']/nombre | /contactos/persona[genero='otro']/apellido", xml);
+
+         //los direcciones, telefonos y correos de los solteros
+         procXPath("/contactos/persona[estado='soltero']/direccion | /contactos/persona[estado='soltero']/telefono | /contactos/persona[estado='soltero']/correo", xml);
+
+         //Estado civil de los menores de 25
+         procXPath("/contactos/persona[edad<25]/nombre | /contactos/persona[edad<25]/estado", xml);
+
+         //Estado civil de los mayores de 25 y menores 35
+         procXPath("/contactos/persona[edad<35 and edad>=25]/nombre | /contactos/persona[edad<35 and edad>=25]/estado", xml);
+
+         //Estado civil de los mayores de 35 y menores 50
+         procXPath("/contactos/persona[edad<50 and edad>=35]/nombre | /contactos/persona[edad<50 and edad>=35]/estado", xml);
+
+         //Estado civil de los mayores de 50
+         procXPath("/contactos/persona[edad>50]/nombre | /contactos/persona[edad>50]/estado", xml);
+
+         //profesion de las mujeres
+         procXPath("/contactos/persona[genero='femenino']/nombre | /contactos/persona[genero='femenino']/profesion", xml);
+
+         //profesion de las hombres
+         procXPath("/contactos/persona[genero='masculino']/nombre | /contactos/persona[genero='masculino']/profesion", xml);
+
+         //Ocupaciones direcciones
+         procXPath("/contactos/child::persona/child::direccion | /contactos/child::persona/child::ocupacion", xml);
+      </script>
+   </body>
+</html>

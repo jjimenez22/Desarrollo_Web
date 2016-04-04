@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>XML con estilo</title>
+      <script type="text/javascript">
+         function cargarXML(fname)
+         {
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", fname, false);
+            xhttp.send("");
+            return xhttp.responseXML;
+         }
+
+         function mostrarResultado()
+         {
+            xml = cargarXML("taller2.xml");
+            xsl = cargarXML("taller2.xsl");
+
+            if (document.implementation && document.implementation.createDocument)
+            {
+               xsltProcessor = new XSLTProcessor();
+               xsltProcessor.importStylesheet(xsl);
+               resultDocument = xsltProcessor.transformToFragment(xml, document);
+               document.getElementById("cuerpo").appendChild(resultDocument);
+            }
+         }
+      </script>
+   </head>
+   <body onload="mostrarResultado()">
+      <div id="cuerpo" />
+   </body>
+</html>

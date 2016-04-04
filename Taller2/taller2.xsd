@@ -6,10 +6,10 @@
       					<xs:complexType>
       							<xs:sequence>
       								<xs:element name="cedula" type="xs:integer">
-      									<xs:unique name="ci_unique">
+      									<!--<xs:unique>
       										<xs:selector xpath="cedula"/>
       										<xs:field xpath="."/>
-      									</xs:unique>
+      									</xs:unique>-->
       								</xs:element>
       								<xs:element name="nombre" type="xs:string"/>
       								<xs:element name="apellido" type="xs:string"/>
@@ -57,5 +57,9 @@
       				</xs:element>
       			</xs:sequence>
       		</xs:complexType>
+            <!--<xs:unique name="cedulaUnica">
+               <xs:selector xpath="cedula"/>
+               <xs:field xpath="."/>
+            </xs:unique>-->
       	</xs:element>
    </xs:schema>

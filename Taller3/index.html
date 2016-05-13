@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Facturación</title>
+ 
+        <script type="text/javascript" src="Ajax.js"></script>
+ 
+        <script type="text/javascript">
+ 
+            function solicitar()
+            {
+                var peticion=null;
+ 
+                peticion = ConstructorXMLHttpRequest();
+ 
+                if (peticion)
+                {
+                    peticion.open('get', "file.txt", false);
+                    peticion.send(null);
+                    document.getElementById('texto').innerHTML = peticion.responseText;
+                }
+            }
+ 
+        </script>
+        
+       
+</head>
+    <body>
+        <header>
+            <h1>Listado de Articulos</h1>
+        </header>
+ 
+        <p id="texto"></p>
+        <br><br>
+       
+        <input type="button" onclick="solicitar()" value="Obtener texto">
+       
+    </body>
+</html>

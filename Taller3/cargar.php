@@ -3,7 +3,7 @@
    if($con->connect_error)
       die('error conectando a bd: '.$con->connect_error);
 
-   $art = $con->query('select * from articulos where codigo = '.$_GET['codigo']);
+   $art = $con->query('select * from articulos where codigo = '.$_GET['code']);
    $con->close();
 
    if ($q=$art->fetch_assoc())
@@ -62,7 +62,7 @@
       echo '<td>'.$subtotal.'</td>';
       $iva=$subtotal*0.12;
       echo '<td>'.$iva.'</td>';
-      echo '<td>'.$subtotal+$iva.'</td>';
+      echo '<td>'.($subtotal+$iva).'</td>';
       echo '</tr>';
       echo '</table>';
    }

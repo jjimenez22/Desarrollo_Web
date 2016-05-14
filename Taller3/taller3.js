@@ -53,7 +53,7 @@ function validarEntrada(input)
 
 function limpiarSpans()
 {
-      spans = document.getElementsByTagName('span');
+      var spans = document.getElementsByTagName('span');
       spans[0].innerHTML='';
       spans[1].innerHTML='';
       return spans;

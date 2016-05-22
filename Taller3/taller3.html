@@ -3,22 +3,33 @@
    <head>
       <meta charset="utf-8">
       <title>Factura con Ajax</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <style>
+         .jumbotron 
+         { 
+            background-color: #f4511e;
+            color: #ffffff;
+         }
+      </style>
    </head>
+
    <body>
-      <section>
-         <div>
-            <h1>Facturacion</h1>
-         </div>
-         <div>
-            <form>
-               Código<br>
-               <input type="number" name="code"><span id="codespan"></span><br>
-               Cantidad<br>
-               <input type="number" name="amount"><span id="amountspan"></span><br>
-               <input type="button" onclick="enviarDatos()" name="button" value="enviar">
+      <section class="container">
+         <div class="jumbotron text-center">
+            <h1>Facturación</h1>
+            <form class="form">
+               <input type="number" name="code" class="form-control" size="100" placeholder="Código"><span id="codespan"></span><br>
+               <input type="number" name="amount" class="form-control" size="100" placeholder="Cantidad"><span id="amountspan"></span><br>
+               
+               <button type="button" onclick="enviarDatos()" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span> Enviar</button>
+               <button type="button" onclick="location='/Taller3/file.php'" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Ayuda</button>
             </form>
          </div>
-         <div id="facturacion">
+         <div id="facturacion" class="text-center">
 
          </div>
       </section>

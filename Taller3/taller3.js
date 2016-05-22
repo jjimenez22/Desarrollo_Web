@@ -10,7 +10,7 @@ function enviarDatos()
          if (xhttp.readyState == 4 && xhttp.status == 200)
          {
             var responseDoc = xhttp.responseText;
-            if (responseDoc !== '')
+            if (/\S/.test(responseDoc))
             {
                document.getElementById("facturacion").innerHTML = responseDoc;
             } else
@@ -31,8 +31,8 @@ function validarEntrada(input)
 
    if(input[0].value === '' || input[0].value <= 0)
    {
-      span[0].style = 'color:red';
-      span[0].innerHTML = ' <= Debes llenar el campo con numeros positivos!!';
+      span[0].style = 'color:blue';
+      span[0].innerHTML = 'Debes llenar el campo con numeros positivos!!';
       result = false;
    } else
    {
@@ -63,6 +63,6 @@ function codigoInvalido()
 {
    var span = limpiarSpans();
 
-   span[0].style = 'color:red';
-   span[0].innerHTML = ' <= Código inválido - pulsa ayuda para ver los productos y sus códigos';
+   span[0].style = 'color:blue';
+   span[0].innerHTML = ' Código inválido - pulsa ayuda para ver los productos y sus códigos';
 }

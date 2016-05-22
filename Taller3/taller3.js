@@ -36,6 +36,7 @@ function validarEntrada(input)
       result = false;
    } else
    {
+      input[1].value=Math.floor(input[1].value);
       if(input[1].value === '' || input[1].value <= 0)
       {
          input[1].value=1;

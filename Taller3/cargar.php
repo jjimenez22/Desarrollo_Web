@@ -59,13 +59,13 @@
                      echo '<td>'.$articulo['precio'].'</td>';
                      echo '<td>'.$articulo['preciototal'].'</td>';
                      $subtotal+=$articulo['preciototal'];
-                     echo '</tr>';
+                     echo '</tr><br>';
                   }
 
                   echo '<tr>';
-                  echo '<th>Subtotal</th>';
-                  echo '<th>IVA</th>';
-                  echo '<th>Total</th>';
+                  echo '<th class="text-center">Subtotal</th>';
+                  echo '<th class="text-center">IVA</th>';
+                  echo '<th class="text-center">Total</th>';
                   echo '</tr>';
                   echo '<tr>';
                   echo '<td>'.$subtotal.'</td>';

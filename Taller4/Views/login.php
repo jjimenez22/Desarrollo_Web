@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+   <meta charset="UTF-8">
 	<title>Ingresa al Sistema</title>
 	<link rel="stylesheet" href="<?php echo base_url()?>static/css/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>static/css/flat-ui.min.css">
@@ -24,7 +24,7 @@
 					<input type="submit" value="Ingresar" class="btn btn-primary"></input>
 				</form>
 			</div>
-			
+
 		</div>
 	</div>
 

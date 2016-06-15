@@ -10,15 +10,17 @@ class Usuario_model extends CI_Model {
 	public function login($username, $password){
 
 		/*Si devuelve una fila es porque existe*/
-		$this->db->where('username', $username);
-		$this->db->where('password', $password);
-		$q = $this->db->get('usuario');
-		if($q->num_rows() > 0){
-			return true;
-		}
-		else{
-			return false;
-		}
+		// $this->db->where('username', $username);
+		// $this->db->where('password', $password);
+		// $q = $this->db->get('usuario');
+		// if($q->num_rows() > 0){
+		// 	return true;
+		// }
+		// else{
+		// 	return false;
+		// }
+
+		return $this->db->query('select username,type from usuario  where username=\''.$username.'\' and password=\''.$password.'\'')->row_array();
 	}
 }
 ?>

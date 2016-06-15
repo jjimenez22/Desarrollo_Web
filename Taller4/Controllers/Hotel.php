@@ -8,7 +8,22 @@ class Hotel extends CI_Controller {
 	}
 
 	function index(){
-		$this->load->view('Hotel/header');
+		$this->loadView('WT4CarouselView');
+	}
+
+	function administrar(){
+		if($this->session->has_userdata('username'))
+		{
+			$this->loadView('WT4MenuAdministracionView');
+		}else {
+			redirect('login');
+		}
+	}
+
+	function loadView($view){
+		$this->load->view('header');
+		$this->load->view($view);
+		$this->load->view('WT4FooterView');
 	}
 }
 ?>

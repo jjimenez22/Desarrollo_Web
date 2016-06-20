@@ -14,12 +14,12 @@ class administrar_habitacion extends CI_Model
 
    function habitaciones()
    {
-      return $this->db->query('select * from habitacion order by numero')->result();
+      return $this->db->query('select * from habitacion order by numero');
    }
 
    function buscar_habitacion($numero)
    {
-      return $this->db->query('select * from habitacion where numero = \''.$numero.'\'')->result();
+      return $this->db->query('select * from habitacion where numero = '.$numero)->result();
    }
 
    function agregar($numero, $tipo)

@@ -18,9 +18,19 @@ class AdministrarHabitaciones extends CI_Controller
          array(
                  'field' => 'numero',
                  'label' => 'Numero de Habitacion',
-                 'rules' => 'required|callback_check_numero',
+                 'rules' => 'required|numeric|callback_check_numero',
                  'errors' => array(
-                        'required' => 'Debe proveer un %s.'
+                        'required' => 'Debe proveer un %s.',
+                        'numeric' => '%s debe ser un numero'
+                 )
+         ),
+         array(
+                 'field' => 'tipo',
+                 'label' => 'Descripcion',
+                 'rules' => 'required|max_length[254]',
+                 'errors' => array(
+                        'required' => 'Debe proveer un %s.',
+                        'max_length' => 'Demasiado larga!'
                  )
          )
       );
@@ -31,8 +41,6 @@ class AdministrarHabitaciones extends CI_Controller
    {
       if ($this->session->has_userdata('username') && $this->session->type !== 'recepcionista')
       {
-         $view_data['nums'] = $this->administrar_habitacion->habitaciones();
-
          if ($this->form_validation->run()) {
             $this->administrar_habitacion->agregar($this->input->post('numero'), $this->input->post('tipo'));
 
@@ -41,10 +49,10 @@ class AdministrarHabitaciones extends CI_Controller
             $this->load->view('succesView', $succes_data);
             $this->load->view('WT4FooterView');
          }else {
-            $view_data['habitaciones'] = $this->administrar_habitacion->habitaciones()));
+            $view_data['habitaciones'] = $this->administrar_habitacion->habitaciones();
 
             $this->load->view('header');
-            $this->load->view('administrarHabitaciones', $view_data;
+            $this->load->view('administrarHabitaciones', $view_data);
             $this->load->view('WT4FooterView');
          }
 

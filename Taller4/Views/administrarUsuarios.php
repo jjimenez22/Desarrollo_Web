@@ -26,7 +26,7 @@
       <h2>Usuarios registrados</h2>
       <ul>
          <?php
-         foreach ($users->result() as $user ) {
+         foreach ($users as $user ) {
                echo "<li>Username: ".$user->username."<br>Tipo: ".$user->type."<br><a href=\"".site_url('AdministrarUsuariosControladorWT4/eliminar')."/".$user->username."\"><button type=\"button\" name=\"buttoneliminar\" class=\"btn btn-danger\">Eliminar <span class=\"glyphicon glyphicon-trash\"></span></button></a></li>";
             }
           ?>

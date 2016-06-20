@@ -12,10 +12,10 @@ class Administrar_reservacion extends CI_Model
       parent::__construct();
    }
 
-   function reservaciones()
-   {
-      return $this->db->query('select * from reservacion')->result();
-   }
+   // function reservaciones()
+   // {
+   //    return $this->db->query('select * from reservacion')->result();
+   // }
 
    function reservaciones($orden)
    {
@@ -29,7 +29,7 @@ class Administrar_reservacion extends CI_Model
 
    function agregar($numero, $fecha, $fechaf, $nombre)
    {
-      return $this->db->query('insert into reservacion values ('.$numero.',\''.$fecha.'\','.$fechaf.',\''.$nombre.'\')');
+      return $this->db->query('insert into reservacion values ('.$numero.',\''.$fecha.'\',\''.$fechaf.'\',\''.$nombre.'\')');
    }
 
    function eliminar($numero, $fecha)
@@ -39,17 +39,50 @@ class Administrar_reservacion extends CI_Model
 
    function esta_ocupada($numero, $fini, $ffin)
    {
-      return empty($this->db->query("select numero from reservacion where numero=".$numero." and ((fecha_inicio < '".$fini."' and fecha_fin > '".$fini."') or (fecha_inicio < '".$ffin."' and fecha_fin > '".$ffin."'))"));
+      return empty($this->db->query("select numero from reservacion where numero=".$numero." and ((fecha_inicio < '".$fini."' and fecha_fin > '".$fini."') or (fecha_inicio < '".$ffin."' and fecha_fin > '".$ffin."'))")->result());
    }
 
    function disponibles($fecha)
    {
-      return $this->db->query("select habitacion.* from habitacion inner join reservacion where habitacion.numero = reservacion.numero and (reservacion.fecha_inicio > '".$fecha."' or reservacion.fecha_fin <= '".$fecha."') group by habitacion.numero")->result();
+      $res1 = $this->db->query("select numero from reservacion where fecha_inicio <= '".$fecha."' and fecha_fin > '".$fecha."'")->result();
+      $query = 'select * from habitacion';
+      if(!empty($res1))
+      {
+         $query .= ' where';
+         $i=false;
+         foreach ($res1 as $num)
+         {
+            if($i)
+            {
+               $query .= " and";
+            }
+            $query .= " numero != ".$num->numero;
+            $i=true;
+         }
+      }
+      return $this->db->query($query)->result();
    }
 
    function reservadas($fecha)
    {
-      return $this->db->query("select habitacion.* from habitacion inner join reservacion where habitacion.numero = reservacion.numero and reservacion.fecha_inicio < '".$fecha."' and reservacion.fecha_fin > '".$fecha."'")->result();
+      $res1 = $this->db->query("select numero from reservacion where fecha_inicio <= '".$fecha."' and fecha_fin > '".$fecha."'")->result();
+      if(empty($res1))
+      {
+         return $res1;
+      }else {
+         $query = 'select * from habitacion where';
+         $i=false;
+         foreach ($res1 as $num)
+         {
+            if($i)
+            {
+               $query .= " and";
+            }
+            $query .= " numero = ".$num->numero;
+            $i=true;
+         }
+         return $this->db->query($query)->result();
+      }
    }
 }
 

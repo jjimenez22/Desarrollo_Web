@@ -19,7 +19,7 @@ class Administrar_usuario extends CI_Model
 
    function buscar_usuario($username)
    {
-      return $this->db->query('select username from usuario where username = \''.$username.'\'')->result();
+      return $this->db->query('select username from usuario where username = \''.$username.'\'');
    }
 
    function agregar($username, $password, $type)

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2016 a las 17:14:12
+-- Tiempo de generación: 19-06-2016 a las 17:13:40
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 7.0.4
 
@@ -23,33 +23,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla usuario
+-- Estructura de tabla para la tabla habitacion
 --
 
-CREATE TABLE usuario (
-  `username` varchar(20) NOT NULL,
-  `password` varchar(500) DEFAULT NULL,
-  `type` varchar(30) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE habitacion (
+  `numero` int(11) NOT NULL,
+  `tipo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla usuario
+-- Volcado de datos para la tabla habitacion
 --
 
-INSERT INTO usuario (username, `password`, `type`) VALUES
-('admin', '81dc9bdb52d04dc20036dbd8313ed055', 'administrador'),
-('recep', 'e2fc714c4727ee9395f324cd2e7f331f', 'administrador'),
-('geren', 'e10adc3949ba59abbe56e057f20f883e', 'gerente');
+INSERT INTO habitacion (numero, tipo) VALUES
+(2, '2 camas');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla usuario
+-- Indices de la tabla habitacion
 --
-ALTER TABLE usuario
-  ADD PRIMARY KEY (`username`);
+ALTER TABLE habitacion
+  ADD PRIMARY KEY (`numero`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

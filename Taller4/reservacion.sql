@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2016 a las 17:14:12
+-- Tiempo de generación: 19-06-2016 a las 17:10:59
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 7.0.4
 
@@ -23,33 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla usuario
+-- Estructura de tabla para la tabla reservacion
 --
 
-CREATE TABLE usuario (
-  `username` varchar(20) NOT NULL,
-  `password` varchar(500) DEFAULT NULL,
-  `type` varchar(30) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS reservacion (
+  `numero` int(11) DEFAULT NULL,
+  `fecha_inicio` date NOT NULL,
+  `fecha_fin` date NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  PRIMARY KEY (`fecha_inicio`),
+  KEY `numero` (`numero`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla usuario
---
-
-INSERT INTO usuario (username, `password`, `type`) VALUES
-('admin', '81dc9bdb52d04dc20036dbd8313ed055', 'administrador'),
-('recep', 'e2fc714c4727ee9395f324cd2e7f331f', 'administrador'),
-('geren', 'e10adc3949ba59abbe56e057f20f883e', 'gerente');
-
---
--- Índices para tablas volcadas
+-- Restricciones para tablas volcadas
 --
 
 --
--- Indices de la tabla usuario
+-- Filtros para la tabla reservacion
 --
-ALTER TABLE usuario
-  ADD PRIMARY KEY (`username`);
+ALTER TABLE reservacion
+  ADD CONSTRAINT `reservacion_ibfk_1` FOREIGN KEY (`numero`) REFERENCES habitacion (`numero`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

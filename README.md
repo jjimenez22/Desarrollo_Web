@@ -1,4 +1,2 @@
 # Desarrollo_Web
-Repositorio para compartir el contenido de los talleres de Desarrollo de Aplicaciones Web
-
-Cada taller tendra su carpeta
+Talleres del curso de Desarrollo de Aplicaciones Web
